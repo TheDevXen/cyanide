@@ -1,0 +1,26 @@
+{
+  "name": "cyanide",
+  "version": "1.0.0",
+  "description": "A Simple ChatBot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TheDevXen/CyanideBot.git"
+  },
+  "keywords": [
+    "bot",
+    "ai"
+  ],
+  "author": "TheDevXen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDevXen/CyanideBot/issues"
+  },
+  "homepage": "https://github.com/TheDevXen/CyanideBot#readme",
+  "dependencies": {
+    "brain.js": "^1.2.4"
+  }
+}
