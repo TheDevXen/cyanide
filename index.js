@@ -34,7 +34,6 @@ const brain = require('brain.js');
 const fs = require('fs');
 const net = new brain.recurrent.LSTM(config);
 
-console.log("Training...");
 const date = new Date();
 
 var array = [];
@@ -47,13 +46,15 @@ fs.readFile('learned.json', async (err, data) => {
 		})
 		fs.readFile('eassy.txt', async (err, data) => {
 			if(!err){
+				console.log("Training...");
 				data = data.toString();
 				array = data.split('.');
 				console.log("Data Length: " + array.length)
-				train(array);
+				train();
 			}
 		}) 
 	} else {
+		console.log("Network already trained...");
 		boot();
 	}
 });
@@ -89,5 +90,5 @@ const boot = async () => {
             	ctx.reply(net.run())
         	}
         }
-	})
+	});
 }
